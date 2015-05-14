@@ -1,0 +1,72 @@
+// Common styles of the project
+// Flat UI main stylesheet that aggregates all modules
+
+// Loading custom fonts
+//@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+@import "libraries/flatui/modules/local-fonts";
+@import "libraries/flatui/modules/glyphicons";
+
+// Loading config with variables (changing them leads to changing a color scheme)
+@import "libraries/flatui/variables";
+
+// Utility mixins for greater good
+@import "libraries/flatui/mixins";
+
+@import "libraries/flatui/modules/scaffolding";
+
+// Modules
+@import "libraries/flatui/modules/type";
+@import "libraries/flatui/modules/code";
+@import "libraries/flatui/modules/thumbnails";
+@import "libraries/flatui/modules/buttons";
+@import "libraries/flatui/modules/button-groups";
+@import "libraries/flatui/modules/caret";
+@import "libraries/flatui/modules/select";
+@import "libraries/flatui/modules/forms";
+@import "libraries/flatui/modules/input-icons";
+@import "libraries/flatui/modules/input-groups";
+@import "libraries/flatui/modules/checkbox-and-radio";
+@import "libraries/flatui/modules/navbar";
+@import "libraries/flatui/modules/tagsinput";
+@import "libraries/flatui/modules/typeahead";
+@import "libraries/flatui/modules/progress-bars";
+@import "libraries/flatui/modules/slider";
+@import "libraries/flatui/modules/pager";
+@import "libraries/flatui/modules/pagination";
+@import "libraries/flatui/modules/tooltip";
+@import "libraries/flatui/modules/dropdown";
+@import "libraries/flatui/modules/switch";
+@import "libraries/flatui/modules/share";
+
+// Examples
+@import "libraries/flatui/modules/palette";
+@import "libraries/flatui/modules/tile";
+@import "libraries/flatui/modules/todo";
+@import "libraries/flatui/modules/video";
+@import "libraries/flatui/modules/login";
+
+@import "libraries/flatui/modules/footer";
+
+// Spaces
+@import "libraries/flatui/spaces";
+
+html, body {
+    height: 100%;
+}
+
+.page {
+    // Стили для body
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}
