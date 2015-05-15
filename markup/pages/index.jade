@@ -5,16 +5,64 @@ doctype html
 |<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
 
 include ../modules/head/head
+include ../modules/navbar/navbar
 include ../modules/footer/footer
 
 head
     +head(head.defaults)
 body.page
-  section.page__wrapper
+  .container-fluid
+    .row
+      +navbar()
+    .page-wrapper.container
+      .row
+        .col-sm-6.center-block.iconbar.iconbar-horizontal
+          |Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          |Dolorem hic quisquam praesentium porro repudiandae facilis ipsa 
+          |mollitia, exercitationem, aliquam ipsum blanditiis voluptates 
+          |tenetur illo, animi expedita eligendi quibusdam dolor, eum quis numquam 
+          |non error voluptatem sed ullam. Nam tenetur alias sunt similique temporibus, 
+          //- |hic veritatis, deleniti, laborum quasi fugiat beatae!
+      - for (var i = 1; i < 6; ++i) {
+        .row
+          .alert.alert-info
+            h4 Lorem ipsum dolor.
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              | Consequatur veniam consectetur voluptates debitis accusantium! 
+              | Sint eos quaerat dolorum asperiores in omnis nisi quae repellat 
+              | eligendi incidunt illo, eaque distinctio, ducimus, dolorem debitis 
+              | onsectetur eum libero sunt iusto provident deleniti nihil magni. 
+              | Dolore, dolores, asperiores quidem iure, omnis aut voluptas illo 
+              | nemo incidunt nisi facilis quo ducimus quisquam ex molestias magnam 
+              | eligendi quae praesentium! Aliquam, quia, numquam. Perspiciatis magni 
+              | non ratione voluptate possimus ab, est expedita iusto excepturi illo 
+              | dignissimos sit a iste laborum libero dolore quidem, tenetur sunt. Aut 
+              | agnam quae alias ab perspiciatis enim sapiente? Iure minus, quisquam ad 
+              | culpa excepturi hic vitae enim tenetur ea beatae, numquam sint ipsum quas.
+              | orporis sed fugiat quod autem officia, non doloribus? Dolor accusantium,
+              |  consequuntur dicta delectus aliquid tempora! Explicabo vitae, l
+              |  aboriosam quas reiciendis provident praesentium, molestiae culpa ist
+              | e beatae assumenda officia perferendis. Facilis a fugit blanditiis d
+              |  oloribus tempore alias repellat autem, est consectetur! Repellendus
+              |  sit debitis incidunt necessitatibus nostrum, eveniet accusantium an
+              |  imi magnam accusamus recusandae placeat, consequuntur ducimus labor
+              |  iosam doloremque, architecto voluptatibus, ratione deserunt tenetur
+              |   commodi dolor quam. Quidem ratione quam voluptatem in quasi minima
+              |    porro praesentium necessitatibus veniam sed deserunt placeat, accu
+              |    samus perspiciatis eaque dolores tenetur non rem. Rem obcaecati ma
+              |    gni molestias, error id repellendus libero vel! Soluta consequatur
+              |     distinctio debitis perferendis hic voluptates ab beatae molestiae
+              |      minus omnis temporibus eos, saepe dignissimos libero maiores, al
+              |      ias deleniti illo fugiat et, doloremque. A dolore totam commodi 
+              |      quia reprehenderit sunt voluptatem, architecto dignissimos place
+              |      at soluta sint aperiam debitis, maiores. Rem, cumque, porro? Moll
+              |      itia ducimus repellat deleniti sint atque, dolorem rem quos volup
+              |      tate debitis fugit, tempore porro nisi laborum. Vel, eligendi cor
+              |      rupti non vitae, et reprehenderit aspernatur quos adipisci sequi
+              |       aliquid, aperiam sint.
+      -}
 
-      //- Include your modules here
-
-    .page__buffer
 
   .page__footer
         +footer()

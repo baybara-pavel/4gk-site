@@ -17,13 +17,13 @@
 
   &:hover,
   &:focus {
-    outline: none;
+  	outline: none;
     color: @btn-default-color;    
   }
 
   &:active,
   &.active {
-    outline: none;
+  	outline: none;
     .box-shadow(none);
   }
 
@@ -44,12 +44,12 @@
     top: 1px;
     
     .btn-xs& {
-      font-size: 11px;
-      top: 0;
-    }
-    .btn-hg& {
-      top: 2px;
-    } 
+			font-size: 11px;
+			top: 0;
+		}
+		.btn-hg& {
+			top: 2px;
+		} 
   }  
 }
 
@@ -119,16 +119,16 @@
 // --------------------------------------------------
 
 .btn-hg {
-  .button-size(13px, 20px, @btn-font-size-hg, @btn-line-height-hg, @border-radius-large);
+	.button-size(13px, 20px, @btn-font-size-hg, @btn-line-height-hg, @border-radius-large);
 }
 .btn-lg {
-  .button-size(10px, 19px, @btn-font-size-lg, @btn-line-height-lg, @border-radius-large);
+	.button-size(10px, 19px, @btn-font-size-lg, @btn-line-height-lg, @border-radius-large);
 }
 .btn-sm {
-  .button-size(9px, 13px, @btn-font-size-sm, @btn-line-height-sm, @border-radius-base);
+	.button-size(9px, 13px, @btn-font-size-sm, @btn-line-height-sm, @border-radius-base);
 }
 .btn-xs {
-  .button-size(6px, 9px, @btn-font-size-xs, @btn-line-height-xs, @border-radius-small);
+	.button-size(6px, 9px, @btn-font-size-xs, @btn-line-height-xs, @border-radius-small);
 }  
   
 
@@ -143,5 +143,33 @@
 // --------------------------------------------------
 
 .btn-block {
-  white-space: normal;
+	white-space: normal;
+}
+
+// SOCIAL BUTTONS
+// ----------------------
+
+[class*="btn-social-"] {
+	.button-size(10px, 15px, @btn-social-font-size-base, @btn-social-line-height-base, @border-radius-base);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-social-pinterest {
+  .social-button-variant(@btn-default-color, @social-pinterest);
+}
+.btn-social-linkedin {
+  .social-button-variant(@btn-default-color, @social-linkedin)
+}
+.btn-social-stumbleupon {
+  .social-button-variant(@btn-default-color, @social-stumbleupon);
+}
+.btn-social-googleplus {
+  .social-button-variant(@btn-default-color, @social-googleplus);
+}
+.btn-social-facebook {
+  .social-button-variant(@btn-default-color, @social-facebook);
+}
+.btn-social-twitter {
+  .social-button-variant(@btn-default-color, @social-twitter);
 }

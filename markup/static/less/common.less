@@ -3,70 +3,81 @@
 
 // Loading custom fonts
 //@import url("https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
-@import "libraries/flatui/modules/local-fonts";
-@import "libraries/flatui/modules/glyphicons";
+@import "./libraries/flatui/fonts";
+@import "./libraries/flatui/icon-font";
 
 // Loading config with variables (changing them leads to changing a color scheme)
-@import "libraries/flatui/variables";
+@import "./libraries/flatui/variables";
 
 // Utility mixins for greater good
-@import "libraries/flatui/mixins";
+@import "./libraries/flatui/mixins";
 
-@import "libraries/flatui/modules/scaffolding";
+@import "./libraries/flatui/scaffolding";
 
 // Modules
-@import "libraries/flatui/modules/type";
-@import "libraries/flatui/modules/code";
-@import "libraries/flatui/modules/thumbnails";
-@import "libraries/flatui/modules/buttons";
-@import "libraries/flatui/modules/button-groups";
-@import "libraries/flatui/modules/caret";
-@import "libraries/flatui/modules/select";
-@import "libraries/flatui/modules/forms";
-@import "libraries/flatui/modules/input-icons";
-@import "libraries/flatui/modules/input-groups";
-@import "libraries/flatui/modules/checkbox-and-radio";
-@import "libraries/flatui/modules/navbar";
-@import "libraries/flatui/modules/tagsinput";
-@import "libraries/flatui/modules/typeahead";
-@import "libraries/flatui/modules/progress-bars";
-@import "libraries/flatui/modules/slider";
-@import "libraries/flatui/modules/pager";
-@import "libraries/flatui/modules/pagination";
-@import "libraries/flatui/modules/tooltip";
-@import "libraries/flatui/modules/dropdown";
-@import "libraries/flatui/modules/switch";
-@import "libraries/flatui/modules/share";
-
-// Examples
-@import "libraries/flatui/modules/palette";
-@import "libraries/flatui/modules/tile";
-@import "libraries/flatui/modules/todo";
-@import "libraries/flatui/modules/video";
-@import "libraries/flatui/modules/login";
-
-@import "libraries/flatui/modules/footer";
+@import "./libraries/flatui/modules/type";
+@import "./libraries/flatui/modules/code";
+@import "./libraries/flatui/modules/buttons";
+@import "./libraries/flatui/modules/button-groups";
+@import "./libraries/flatui/modules/caret";
+@import "./libraries/flatui/modules/select";
+@import "./libraries/flatui/modules/forms";
+@import "./libraries/flatui/modules/input-icons";
+@import "./libraries/flatui/modules/input-groups";
+@import "./libraries/flatui/modules/file-input";
+@import "./libraries/flatui/modules/checkbox-and-radio";
+@import "./libraries/flatui/modules/tagsinput";
+@import "./libraries/flatui/modules/typeahead";
+@import "./libraries/flatui/modules/progress-bars";
+@import "./libraries/flatui/modules/slider";
+@import "./libraries/flatui/modules/spinner";
+@import "./libraries/flatui/modules/datepicker";
+@import "./libraries/flatui/modules/pager";
+@import "./libraries/flatui/modules/pagination";
+@import "./libraries/flatui/modules/tooltip";
+@import "./libraries/flatui/modules/dropdown";
+@import "./libraries/flatui/modules/tables";
+@import "./libraries/flatui/modules/labels";
+@import "./libraries/flatui/modules/badges";
+@import "./libraries/flatui/modules/alerts";
+@import "./libraries/flatui/modules/bottom";
+@import "./libraries/flatui/modules/navs";
+@import "./libraries/flatui/modules/navbar";
+@import "./libraries/flatui/modules/iconbar";
+@import "./libraries/flatui/modules/breadcrumbs";
+@import "./libraries/flatui/modules/popover";
+@import "./libraries/flatui/modules/dialog";
+@import "./libraries/flatui/modules/modals";
+@import "./libraries/flatui/modules/switch";
+@import "./libraries/flatui/modules/carousel";
 
 // Spaces
-@import "libraries/flatui/spaces";
+@import "./libraries/flatui/spaces";
 
-html, body {
-    height: 100%;
+// html, body {
+//     height: 100%;
+// }
+
+// .page {
+//   background-color: @bg-color;
+// }
+
+.page-wrapper {
+    margin-top: 53px;
+    padding-top: 21.5px;
+    padding-bottom: 21.5px;
+    // min-height: 100%;
+    // margin-bottom: -50px;
 }
 
-.page {
-    // Стили для body
-}
+// .page-wrapper {
+  
+// }
 
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
-}
+// .panel {
+//   border-radius: 0;
+//   border: 5px solid #fff;
+//   background-color: #3498db;
+//   padding: 50px;
+//   color: #fff;
+// }

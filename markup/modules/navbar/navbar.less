@@ -1,0 +1,51 @@
+.navbar {
+  text-transform: uppercase;
+  a {
+    font-weight: normal;
+  }
+  .navbar-header {
+    position: relative;
+    a:hover, a:focus, .navbar-brand:hover, .navbar-brand:focus {
+      color: @navbar-inverse-link-color
+    }
+    img.logo {
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width:53px;
+    }
+  }
+  .navbar-brand {
+    // padding-left: 87px; //колхоз
+    margin-left: 37px!important; //колхоз
+  }
+  .nav {
+    text-align: center;
+    margin-top: 10px;
+    li {
+      &.active {
+        a{
+          color:  @navbar-inverse-bg;
+        }
+      }
+      a {
+        font-weight: normal;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        padding: 5px 21px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  span.nav-text-link {
+    .hidden;
+  }
+}
+@media (max-width: 768px) {
+  span.nav-text-link {
+    display: inline!important;
+    visibility: visible!important;
+  }
+}

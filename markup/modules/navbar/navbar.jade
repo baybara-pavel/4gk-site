@@ -1,0 +1,37 @@
+mixin navbar(data)
+  nav.navbar.navbar-fixed-top.navbar-inverse(role='navigation')
+    .container
+        //- .row
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-01')
+            span.sr-only Toggle navigation
+          a(href="#")
+            img.logo(src='%=staticPrefix=%img/general/mortarboard.svg')
+            .navbar-brand ЧГК СибАДИ
+        #navbar-collapse-01.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#fakelink')
+                span.fui-home &nbsp
+                span.nav-text-link| Главная
+            li
+              a(href='#fakelink')
+                span.fui-star-2 &nbsp
+                span.nav-text-link|  Первенство
+            li
+              a(href='#fakelink')
+                span.fui-photo &nbsp
+                span.nav-text-link| Фото
+            li
+              a(href='#fakelink')
+                span.fui-video &nbsp
+                span.nav-text-link| Видео
+            li
+              a(href='#fakelink') 
+                span.fui-list &nbsp
+                span.nav-text-link| Архив вопросов
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#fakelink') 
+                span.nav-text-link Профиль &nbsp
+                span.fui-user
