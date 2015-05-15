@@ -1,5 +1,8 @@
 mixin footer(data)
-    footer
+    footer.bottom-menu.bottom-menu-inverse
+      .container
+        .row
+          span.pull-right &#169 "Что? Где? Когда? СибАДИ 2015"
         //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='https://code.jquery.com/jquery-2.1.4.min.js')
-        script(src='%=staticPrefix=%js/main%=hash=%%=min=%.js')
+      script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+      script(src='%=staticPrefix=%js/main%=hash=%%=min=%.js')

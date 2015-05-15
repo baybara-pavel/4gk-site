@@ -9,24 +9,26 @@ include ../modules/navbar/navbar
 include ../modules/footer/footer
 
 head
-    +head(head.defaults)
+    +head(head.main)
 body.page
   .container-fluid
     .row
       +navbar()
     .page-wrapper.container
       .row
-        .col-sm-6.center-block.iconbar.iconbar-horizontal
-          |Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          |Dolorem hic quisquam praesentium porro repudiandae facilis ipsa 
-          |mollitia, exercitationem, aliquam ipsum blanditiis voluptates 
-          |tenetur illo, animi expedita eligendi quibusdam dolor, eum quis numquam 
-          |non error voluptatem sed ullam. Nam tenetur alias sunt similique temporibus, 
-          //- |hic veritatis, deleniti, laborum quasi fugiat beatae!
+        .col-xs-12.col-md-8.center-block.block-info-primary
+          h3 Сезон 2015. Весенняя серия
+          img(src='%=staticPrefix=%img/general/clocks.svg')
+          h3 Следующая игра 
+          h3
+           u.game-date 15 мая в 13:00
+
+      h2.text-center Новости
       - for (var i = 1; i < 6; ++i) {
         .row
-          .alert.alert-info
-            h4 Lorem ipsum dolor.
+          .block-info
+            h4.text-center 
+              | Lorem ipsum dolor.
             p
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
               | Consequatur veniam consectetur voluptates debitis accusantium! 
