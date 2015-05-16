@@ -1,0 +1,63 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../modules/head/head
+include ../modules/navbar/navbar
+include ../modules/footer/footer
+
+head
+    +head(head.profile)
+body.page
+  .container-fluid
+    .row
+      +navbar('Профиль')
+    .page-wrapper.container
+      .row
+        .block-info-team
+          img.img-rounded.img-responsive.img-team-logo.pull-left(src='%=staticPrefix=%img/general/bulb.svg')
+          .statistics
+            h1 "Матрац с ЭП"
+            hr
+            h3 &nbsp Рейтинг в сезоне: 
+              span.label.label-warning 2
+            h3 &nbsp Взято вопросов: 
+              span.label.label-warning 20
+
+      h2.text-center 
+        img.img-entry(src='/%=staticPrefix=%img/general/clipboard.svg')
+        | Заявка 
+      .row
+        form.form-inline.block-info
+          .form-group
+            label.player-rang Капитан
+            input.form-control(type='text', placeholder='Фамилия')
+            input.form-control(type='text', placeholder='Имя')
+            input.form-control(type='text', placeholder='Отчество')
+            select.select-block.mbl(name='departments')
+              option(value='0') ИСУ
+              option(value='1') ПГС
+            select.select-block.mbl(name='group')
+              option АС-10И1
+              option АС-10И2
+          - for (var i = 1; i < 6; ++i) {
+            .form-group
+              label.player-rang Участник #{i}
+              input.form-control(type='text', placeholder='Фамилия')
+              input.form-control(type='text', placeholder='Имя')
+              input.form-control(type='text', placeholder='Отчество')
+              select.select-block.mbl(name='departments')
+                option(value='0') ИСУ
+                option(value='1') ПГС
+              select.select-block.mbl(name='group')
+                option АС-10И1
+                option АС-10И2
+          -}
+          .form-group
+            button.btn-submit Подать заявку
+
+    .buffer
+  .page-footer
+        +footer()

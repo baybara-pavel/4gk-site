@@ -106,6 +106,10 @@ String.prototype.repeat = function(num) {
       });
     }  
 
+    $('select').selectpicker({
+      style: 'btn btn-warning', menuStyle: 'dropdown-inverse'
+    });
+    
     // make code pretty
     window.prettyPrint && prettyPrint();
     

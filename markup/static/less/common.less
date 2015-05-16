@@ -56,9 +56,9 @@
 
 @import "./GUI";
 
-// html, body {
-//     height: 100%;
-// }
+html, body {
+  height: 100%;
+}
 
 // .page {
 //   background-color: @bg-color;
@@ -72,24 +72,32 @@ footer {
   cursor: default;
 
 }
-
-.page-wrapper {
-    margin-top: 53px;
-    padding-top: 21.5px;
-    padding-bottom: 21.5px;
+.container-fluid {
+  min-height: 100%;
+  margin: 0 auto -112px;
 }
+.page-wrapper {
+  margin-top: 53px;
+  padding-top: 21.5px;
+  padding-bottom: 21.5px;
+}
+
+.page-footer,.buffer {
+  height: 112px;
+}
+
+
+// .label {
+//   font-size: 100%;
+// }
 
 .center-block {
   float: none;
 }
-// .page-wrapper {
-  
-// }
 
-// .panel {
-//   border-radius: 0;
-//   border: 5px solid #fff;
-//   background-color: #3498db;
-//   padding: 50px;
-//   color: #fff;
-// }
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-normal-weight {
+  font-weight: normal;
+}

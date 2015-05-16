@@ -1,0 +1,79 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../../modules/head/head
+include ../../modules/navbar/navbar
+include ../../modules/footer/footer
+
+head
+    +head(head.main)
+body.page
+  .container-fluid
+    .row
+      +navbar('Первенство')
+    .page-wrapper.container
+
+      h2.text-center Сезон 2015
+      .row
+        .block-info
+          h3.text-center Весенняя серия
+          hr
+          .game-synopsis
+            h4
+              a(href='game.html') 
+                | Игра № 
+                span.game-number 1 
+              | состоялась 
+              u.game-date 21 февраля 
+              | победу одержала команда 
+              span.game-winer.label.label-inverse "Вова и медведь"
+          .game-synopsis
+            h4
+              a(href='game.html') 
+                | Игра № 
+                span.game-number 2 
+              | состоялась 
+              u.game-date 20 марта 
+              | победу одержала команда 
+              span.game-winer.label.label-inverse "Вова и медведь"
+      .row
+        .block-info
+          h3.text-center Осенняя серия
+          h3.part-winner.text-center 
+            | Команда-чемпион: 
+            span.label.label-warning "Вова и медведь"
+            img.img-champion(src='/%=staticPrefix=%img/general/medal.svg')
+          hr
+          .game-synopsis
+            h4
+              a(href='game.html') 
+                | Игра № 
+                span.game-number 1 
+              | состоялась 
+              u.game-date 23 октября 
+              | победу одержала команда 
+              span.game-winer.label.label-inverse "Вова и медведь"
+          .game-synopsis
+            h4
+              a(href='game.html') 
+                | Игра № 
+                span.game-number 2 
+              | состоялась 
+              u.game-date 20 ноября
+              | победу одержала команда 
+              span.game-winer.label.label-inverse"Матрац с ЭП"
+          .game-synopsis
+            h4
+              a(href='game.html') 
+                | Игра № 
+                span.game-number 3 
+              | состоялась 
+              u.game-date 20 декабря
+              | победу одержала команда 
+              span.game-winer.label.label-inverse"Вова и медведь"
+    .buffer
+  .page-footer
+    +footer()

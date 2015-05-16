@@ -13,23 +13,26 @@ head
 body.page
   .container-fluid
     .row
-      +navbar()
+      +navbar('Главная')
     .page-wrapper.container
       .row
         .col-xs-12.col-md-8.center-block.block-info-primary
           h3 Сезон 2015. Весенняя серия
-          img(src='%=staticPrefix=%img/general/clocks.svg')
+          img(src='/%=staticPrefix=%img/general/clocks.svg')
           h3 Следующая игра 
           h3
-           u.game-date 15 мая в 13:00
+           span.label.label-danger.game-date 15 мая в 13:00
 
-      h2.text-center Новости
+      h2.text-center
+        img.img-news(src='/%=staticPrefix=%img/general/rss.svg')
+        |Новости
       - for (var i = 1; i < 6; ++i) {
         .row
           .block-info
             h4.text-center 
               | Lorem ipsum dolor.
-            p
+            hr
+            p.news-text
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
               | Consequatur veniam consectetur voluptates debitis accusantium! 
               | Sint eos quaerat dolorum asperiores in omnis nisi quae repellat 
@@ -63,8 +66,9 @@ body.page
               |      tate debitis fugit, tempore porro nisi laborum. Vel, eligendi cor
               |      rupti non vitae, et reprehenderit aspernatur quos adipisci sequi
               |       aliquid, aperiam sint.
+            p.text-right
+              span.label.label-default.news-date21 13/03/2015 17:00
       -}
-
-
-  .page__footer
-        +footer()
+    .buffer
+  .page-footer
+    +footer()
