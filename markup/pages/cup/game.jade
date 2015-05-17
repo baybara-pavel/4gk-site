@@ -1,0 +1,85 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../../modules/head/head
+include ../../modules/navbar/navbar
+include ../../modules/footer/footer
+include ../../modules/db/db
+
+head
+    +head(head.cup)
+body.page
+  .container-fluid
+    .row
+      +navbar('Первенство')
+    .page-wrapper.container
+
+      h2.text-center 
+        img.img-play(src='/%=staticPrefix=%img/general/play.svg')
+        |Игра от 20.04.2015
+      .row
+        .block-info
+          h3.text-center Результаты
+          hr
+          h3.text-center Команды-победители: 
+            span.label.label-warning "Вова и медведь"
+            img.img-champion(src='/%=staticPrefix=%img/general/medal.svg')
+            span.label.label-warning "Матрац с ЭП"
+            img.img-champion(src='/%=staticPrefix=%img/general/medal.svg')
+          .table-responsive
+            table.table.table-condensed.table-striped.table
+              thead
+                tr
+                  th Название команды
+                  - var teams = ['Вова и медведь', 'Матрац с ЭП', 'Вова и медведь', 'Матрац с ЭП', 'Вова и медведь', 'Матрац с ЭП']
+                  - var results = [['Вова и медведь',1,0,0,1,0,1,1,1,0,1,0,1,0,0,1],['Матрац с ЭП',1,0,0,1,1,1,1,0,1,1,1,0,0,0,0],['Бурундуки',0,0,0,1,0,0,0,1,0,1,0,1,1,0,1],['Диванные аналитики',0,0,0,1,0,1,0,0,0,1,0,0,0,1,0],['Люби матан',0,0,0,1,0,1,0,0,0,0,0,0,0,0,1],['Авантюра',0,0,0,1,0,1,0,0,0,0,0,0,0,0],['Крестный отец и Ко.',0,0,0,1,0,0,0,0,0,0,0,0,1,0,0],['Люська',0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]]
+                  - for (var i = 1; i < 16; ++i) {
+                    th.text-center=i
+                  - }
+                  th.text-center Верно
+                  th.text-center Место
+              tbody
+                -for (var i =0; i<8; ++i){
+                  tr
+                    td
+                      span.label.label-inverse
+                        =results[i][0]
+                    -var count = 0
+                    -for(var j =1; j<16; ++j){
+                      td.text-center
+                        if (results[i][j]=== 1)
+                          -count+=1
+                          span.fui-check.text-success
+                        else
+                          span.fui-cross.text-danger
+                    -}
+                    td.text-center
+                      span.label.label-success=count
+                    td.text-center
+                      span.label.label-primary=i+1
+                -}
+      .row
+        .block-info-photo
+          h3.text-center Фотографии
+          hr
+          .photos
+            - for (var i = 1; i < 20; ++i) {
+              - var imgSrc = '/%=staticPrefix=%img/content/photo/'+i+'.jpg'
+              .img
+                img.img-rounded(src=imgSrc )
+                .overlay
+                  span.fui-eye
+            - }
+      .row
+        .block-info
+          h3.text-center Видео
+          hr
+          .video
+            iframe(width='100%', src='http://www.youtube.com/embed/ycsQaDqghw0', frameborder='0', allowfullscreen='')
+          
+    .buffer
+  .page-footer
+    +footer()

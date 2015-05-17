@@ -1,0 +1,66 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../../modules/head/head
+include ../../modules/navbar/navbar
+include ../../modules/footer/footer
+
+head
+    +head(head.photo)
+body.page
+  .container-fluid
+    .row
+      +navbar('Фото')
+    .page-wrapper.container
+      h2.text-center 
+        img.img-photo(src='/%=staticPrefix=%img/general/camera.svg')
+        |Фотоальбомы 2015
+      .row
+        .block-info
+          h3.text-center Весенняя серия
+          hr
+          .photo-albums-synopsis
+            ul.nav.nav-list
+              li.nav-header
+                h4
+                  |Отчетные фотоальбомы 
+                  | игры № 
+                  span.game-number 1 
+                  | от 
+                  span.game-date 21.03 :
+              - for (var i = 1; i < 16; ++i) {
+                li
+                  a(href='photo.html')
+                    h4
+                      span.fui-photo 
+                      |&nbsp Фотоальбом
+                      span.photo-album-id  #{i}00#{i}-3
+              -}
+          .photo-albums-synopsis
+            ul.nav.nav-list
+              li.nav-header
+                h4
+                  |Отчетные фотоальбомы 
+                  | игры № 
+                  span.game-number 2 
+                  | от 
+                  span.game-date 21.04 :
+              li
+                a(href='photo.html')
+                  h4
+                    span.fui-photo 
+                    |&nbsp Фотоальбом
+                    span.photo-album-id  37930-3
+              li
+                a(href='photo.html')
+                  h4
+                    span.fui-photo
+                    |&nbsp Фотоальбом
+                    span.photo-album-id  37930-3
+
+    .buffer
+  .page-footer
+    +footer()

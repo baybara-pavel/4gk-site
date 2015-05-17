@@ -7,6 +7,7 @@ doctype html
 include ../modules/head/head
 include ../modules/navbar/navbar
 include ../modules/footer/footer
+include ../modules/modal/modal
 
 head
     +head(head.main)
@@ -15,60 +16,41 @@ body.page
     .row
       +navbar('Главная')
     .page-wrapper.container
+      +modal()
       .row
-        .col-xs-12.col-md-8.center-block.block-info-primary
-          h3 Сезон 2015. Весенняя серия
+        h2.text-center Сезон 2015. Весенняя серия
+        .col-xs-12.col-md-7.center-block.block-info-primary
           img(src='/%=staticPrefix=%img/general/clocks.svg')
           h3 Следующая игра 
           h3
-           span.label.label-danger.game-date 15 мая в 13:00
+            a(href='#', data-toggle='modal', data-target='#myModal')
+             span.label.label-danger.game-date 22 мая в 17:00
 
       h2.text-center
         img.img-news(src='/%=staticPrefix=%img/general/rss.svg')
         |Новости
-      - for (var i = 1; i < 6; ++i) {
-        .row
-          .block-info
-            h4.text-center 
-              | Lorem ipsum dolor.
-            hr
-            p.news-text
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              | Consequatur veniam consectetur voluptates debitis accusantium! 
-              | Sint eos quaerat dolorum asperiores in omnis nisi quae repellat 
-              | eligendi incidunt illo, eaque distinctio, ducimus, dolorem debitis 
-              | onsectetur eum libero sunt iusto provident deleniti nihil magni. 
-              | Dolore, dolores, asperiores quidem iure, omnis aut voluptas illo 
-              | nemo incidunt nisi facilis quo ducimus quisquam ex molestias magnam 
-              | eligendi quae praesentium! Aliquam, quia, numquam. Perspiciatis magni 
-              | non ratione voluptate possimus ab, est expedita iusto excepturi illo 
-              | dignissimos sit a iste laborum libero dolore quidem, tenetur sunt. Aut 
-              | agnam quae alias ab perspiciatis enim sapiente? Iure minus, quisquam ad 
-              | culpa excepturi hic vitae enim tenetur ea beatae, numquam sint ipsum quas.
-              | orporis sed fugiat quod autem officia, non doloribus? Dolor accusantium,
-              |  consequuntur dicta delectus aliquid tempora! Explicabo vitae, l
-              |  aboriosam quas reiciendis provident praesentium, molestiae culpa ist
-              | e beatae assumenda officia perferendis. Facilis a fugit blanditiis d
-              |  oloribus tempore alias repellat autem, est consectetur! Repellendus
-              |  sit debitis incidunt necessitatibus nostrum, eveniet accusantium an
-              |  imi magnam accusamus recusandae placeat, consequuntur ducimus labor
-              |  iosam doloremque, architecto voluptatibus, ratione deserunt tenetur
-              |   commodi dolor quam. Quidem ratione quam voluptatem in quasi minima
-              |    porro praesentium necessitatibus veniam sed deserunt placeat, accu
-              |    samus perspiciatis eaque dolores tenetur non rem. Rem obcaecati ma
-              |    gni molestias, error id repellendus libero vel! Soluta consequatur
-              |     distinctio debitis perferendis hic voluptates ab beatae molestiae
-              |      minus omnis temporibus eos, saepe dignissimos libero maiores, al
-              |      ias deleniti illo fugiat et, doloremque. A dolore totam commodi 
-              |      quia reprehenderit sunt voluptatem, architecto dignissimos place
-              |      at soluta sint aperiam debitis, maiores. Rem, cumque, porro? Moll
-              |      itia ducimus repellat deleniti sint atque, dolorem rem quos volup
-              |      tate debitis fugit, tempore porro nisi laborum. Vel, eligendi cor
-              |      rupti non vitae, et reprehenderit aspernatur quos adipisci sequi
-              |       aliquid, aperiam sint.
-            p.text-right
-              span.label.label-default.news-date21 13/03/2015 17:00
-      -}
+      .row
+        .block-info
+          h4.text-center 
+            | Анонс
+          hr
+          //- img.img-responsive.img-rounded.center-block(src='http://cs627519.vk.me/v627519228/894/VhxssJhvQJk.jpg')
+          p.news-text
+            | Друзья! Наконец, 22 мая, состоится третья заключительная игра весенней серии "Что? Где? Когда?" В СибАДИ !!! Вас ждет много новых вопросов, а главное, призы ! Поспешите зарегистрироваться.
+          p.text-right
+            span.label.label-default.news-date21 19/05/2015 16:57
+      .row
+        .block-info
+          h4.text-center 
+            | Результаты игры от 17.05.2015
+          hr
+          //- img.img-responsive.img-rounded.center-block(src='http://cs627519.vk.me/v627519228/894/VhxssJhvQJk.jpg')
+          p.news-text
+            | Спасибо за игру!
+            | Результаты игры уже 
+            a(href='game.hmtl') здесь. 
+          p.text-right
+            span.label.label-default.news-date21 17/04/2015 19:04
     .buffer
   .page-footer
     +footer()

@@ -1,0 +1,66 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../../modules/head/head
+include ../../modules/navbar/navbar
+include ../../modules/footer/footer
+
+head
+    +head(head.archive)
+body.page
+  .container-fluid
+    .row
+      +navbar('Архив вопросов')
+    .page-wrapper.container
+
+      h2.text-center Сезон 2015
+      .row
+        .block-info
+          h3.text-center Весенняя серия
+          hr
+          .game-synopsis
+            ul.nav.nav-list
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder 
+                    |&nbsp Пакет вопросов игры №1 от 21.03
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder
+                    |&nbsp Пакет вопросов игры №2 от 21.04
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder
+                    |&nbsp Пакет вопросов игры №3 от 15.05
+
+      .row
+        .block-info
+          h3.text-center Осенняя серия
+          hr
+          .game-synopsis
+            ul.nav.nav-list
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder 
+                    |&nbsp Пакет вопросов игры №1 от 21.03
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder
+                    |&nbsp Пакет вопросов игры №2 от 21.04
+              li
+                a(href='archive.html')
+                  h4
+                    span.fui-folder
+                    |&nbsp Пакет вопросов игры №3 от 15.05
+
+    .buffer
+  .page-footer
+    +footer()

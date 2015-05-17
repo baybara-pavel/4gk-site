@@ -1,0 +1,35 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../../modules/head/head
+include ../../modules/navbar/navbar
+include ../../modules/footer/footer
+
+head
+    +head(head.cup)
+body.page
+  .container-fluid
+    .row
+      +navbar('Фото')
+    .page-wrapper.container
+
+      h2.text-center 
+        img.img-photo(src='/%=staticPrefix=%img/general/book.svg')
+        |Фотоальбом  3003-3
+      .row
+        .block-info-photo
+          .photos
+            -for (var i = 1; i < 16; ++i) {
+                //- .photo-wrapper
+                //- .photo(style="background-image: url('/%=staticPrefix=%img/general/exaple-image.jpg')")
+              .img
+                img.img-rounded(src='/%=staticPrefix=%img/general/exaple-image.jpg')
+                .overlay
+                  span.fui-eye
+            -}
+    .buffer
+  .page-footer
+    +footer()

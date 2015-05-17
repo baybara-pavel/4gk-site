@@ -109,6 +109,8 @@ String.prototype.repeat = function(num) {
     $('select').selectpicker({
       style: 'btn btn-warning', menuStyle: 'dropdown-inverse'
     });
+    $(':checkbox').checkbox();
+    $('#tabs').tab();
     
     // make code pretty
     window.prettyPrint && prettyPrint();

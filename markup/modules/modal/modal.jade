@@ -1,0 +1,43 @@
+mixin modal(data)
+  #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h2#myModalLabel.modal-title Добро пожаловать
+        .modal-body
+          ul.nav.nav-tabs.nav-append-content#tabs
+            li(role="presentation").active
+              a(href='#tab1', data-toggle="tab") Вход
+            li(role="presentation")
+              a(href='#tab2', data-toggle="tab") Регистрация
+          .tab-content
+            .tab-pane#tab1.active
+              form
+                .form-group
+                  label(for='inputEmail').input-label Логин
+                  input#inputEmail.form-control(type='email', placeholder='Email', required='', autofocus='')
+                .form-group
+                  label(for='inputPassword').input-label Пароль
+                  input#inputPassword.form-control(type='password', placeholder='Пароль', required='')
+                  label.checkbox(for='checkbox1')
+                    input#checkbox1(type='checkbox', value='remember-me', data-toggle='checkbox')
+                    |  Запомните меня
+            .tab-pane#tab2
+              form
+                .form-group
+                  label(for='inputEmail').input-label Название команды
+                  input#inputEmail.form-control(type='text', placeholder='Название', required='', autofocus='')
+                .form-group
+                  label(for='inputEmail').input-label Логин
+                  input#inputEmail.form-control(type='email', placeholder='Email', required='', autofocus='')
+                .form-group
+                  label(for='inputPassword').input-label Пароль
+                  input#inputPassword.form-control(type='password', placeholder='', required='')
+                  label(for='inputPassword').input-label Подтверждение
+                  input#inputPassword.form-control(type='password', placeholder='', required='')
+                  .help-block
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Отмена
+          button.btn.btn-primary(type='button') Готово
