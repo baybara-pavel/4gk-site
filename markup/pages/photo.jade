@@ -4,9 +4,9 @@ doctype html
 |<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 |<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
 
-include ../../modules/head/head
-include ../../modules/navbar/navbar
-include ../../modules/footer/footer
+include ../modules/head/head
+include ../modules/navbar/navbar
+include ../modules/footer/footer
 
 head
     +head(head.cup)
@@ -17,7 +17,7 @@ body.page
     .page-wrapper.container
 
       h2.text-center 
-        img.img-photo(src='/%=staticPrefix=%img/general/book.svg')
+        img.img-photo(src='%=staticPrefix=%img/general/book.svg')
         |Фотоальбом 001
         | от 
         u 17.03.2015
@@ -25,7 +25,7 @@ body.page
         .block-info-photo
           .photos
             - for (var i = 1; i < 20; ++i) {
-              - var imgSrc = '/%=staticPrefix=%img/content/photo/'+i+'.jpg'
+              - var imgSrc = '%=staticPrefix=%img/content/photo/'+i+'.jpg'
               .img
                 img.img-rounded(src=imgSrc )
                 .overlay

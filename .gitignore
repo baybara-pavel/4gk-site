@@ -1,6 +1,7 @@
 node_modules
 temp
 dev
+builds
 .DS_Store
 ._.DS_Store
 

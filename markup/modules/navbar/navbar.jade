@@ -5,33 +5,33 @@ mixin navbar(data)
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-01')
             span.sr-only Toggle navigation
-          a(href="/")
-            img.logo(src='/%=staticPrefix=%img/general/mortarboard.svg')
+          a(href="index.html")
+            img.logo(src='%=staticPrefix=%img/general/mortarboard.svg')
             .navbar-brand ЧГК СибАДИ
         #navbar-collapse-01.collapse.navbar-collapse
           ul.nav.navbar-nav
             li(class= ('Главная' === data ? 'active' : ''))
-              a(href='/')
+              a(href='index.html')
                 span.fui-home &nbsp
                 span.nav-text-link| Главная
             li(class= ('Первенство' === data ? 'active' : ''))
-              a(href='/cup/cup-list.html')
+              a(href='cup-list.html')
                 span.fui-star-2 &nbsp
                 span.nav-text-link|  Первенство
             li(class= ('Фото' === data ? 'active' : ''))
-              a(href='/photo/cup-list-photo.html')
+              a(href='cup-list-photo.html')
                 span.fui-photo &nbsp
                 span.nav-text-link| Фото
             li(class= ('Видео' === data ? 'active' : ''))
-              a(href='/video.html')
+              a(href='video.html')
                 span.fui-video &nbsp
                 span.nav-text-link| Видео
             li(class= ('Архив вопросов' === data ? 'active' : ''))
-              a(href='/archive/cup-list-archive.html') 
+              a(href='cup-list-archive.html') 
                 span.fui-list &nbsp
                 span.nav-text-link| Архив вопросов
           ul.nav.navbar-nav.navbar-right
             li(class= ('Профиль' === data ? 'active' : ''))
-              a(href='/profile.html') 
+              a(href='profile.html') 
                 span.nav-text-link Профиль &nbsp
                 span.fui-user

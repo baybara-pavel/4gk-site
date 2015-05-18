@@ -4,9 +4,9 @@ doctype html
 |<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 |<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
 
-include ../../modules/head/head
-include ../../modules/navbar/navbar
-include ../../modules/footer/footer
+include ../modules/head/head
+include ../modules/navbar/navbar
+include ../modules/footer/footer
 
 head
     +head(head.cup)
@@ -47,7 +47,7 @@ body.page
           h3.part-winner.text-center 
             | Команда-чемпион: 
             span.label.label-warning "Вова и медведь"
-            img.img-champion(src='/%=staticPrefix=%img/general/medal.svg')
+            img.img-champion(src='%=staticPrefix=%img/general/medal.svg')
           hr
           .game-synopsis
             h4
