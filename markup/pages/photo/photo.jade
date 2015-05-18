@@ -18,18 +18,19 @@ body.page
 
       h2.text-center 
         img.img-photo(src='/%=staticPrefix=%img/general/book.svg')
-        |Фотоальбом  3003-3
+        |Фотоальбом 001
+        | от 
+        u 17.03.2015
       .row
         .block-info-photo
           .photos
-            -for (var i = 1; i < 16; ++i) {
-                //- .photo-wrapper
-                //- .photo(style="background-image: url('/%=staticPrefix=%img/general/exaple-image.jpg')")
+            - for (var i = 1; i < 20; ++i) {
+              - var imgSrc = '/%=staticPrefix=%img/content/photo/'+i+'.jpg'
               .img
-                img.img-rounded(src='/%=staticPrefix=%img/general/exaple-image.jpg')
+                img.img-rounded(src=imgSrc )
                 .overlay
                   span.fui-eye
-            -}
+            - }
     .buffer
   .page-footer
     +footer()

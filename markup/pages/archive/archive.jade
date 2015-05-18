@@ -7,6 +7,7 @@ doctype html
 include ../../modules/head/head
 include ../../modules/navbar/navbar
 include ../../modules/footer/footer
+include ../../modules/db/db
 
 head
     +head(head.archive)
@@ -18,7 +19,7 @@ body.page
 
       h2.text-center 
         img.img-play(src='/%=staticPrefix=%img/general/key.svg')
-        |Пакет вопросов от 15.05.2015
+        | Пакет вопросов от 17.03.2015
       .row
         .block-info
           .table-responsive
@@ -31,20 +32,21 @@ body.page
                   th
                     h5.text-center Ответ
               tbody
-                - for (var i = 1; i < 16; ++i) {
+                - var i = 0
+                each question in questions
+                  -i += 1
                   tr
                     td
                       h6.text-center=i
                     td
-                      h6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed consequuntur iure nemo voluptas inventore ipsa enim. Laudantium nostrum eius aliquam voluptatem sit voluptate consequuntur minus, dolorem
+                      h6=question.text
                     td.text-center
                       -var collapseId = 'collapseExample'+ i
                       -var collapseRef = '#collapseExample'+ i
                       button.btn.btn-hg.btn-warning(tupe='button', data-toggle="collapse", data-target=collapseRef, aria-expanded="false", aria-controls=collapseId)
                         Показать
                       .collapse(id=collapseId)
-                        h6 Lorem ipsum.
-                - }
+                        h6=question.answer
     .buffer
   .page-footer
     +footer()
